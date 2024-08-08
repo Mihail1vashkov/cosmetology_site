@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Косметологическая клиника</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'index' %}">Косметологическая клиника</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'doctors' %}">Наши врачи</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'services' %}">Наши услуги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'procedures' %}">Наши процедуры</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Добро пожаловать в нашу косметологическую клинику</h1>
+        <p class="text-center">Мы рады предложить вам широкий спектр косметологических услуг для вашего комфорта и красоты. Пожалуйста, используйте меню выше для получения дополнительной информации о наших врачах, услугах и процедурах.</p>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/doctor_1.jpg' %}" class="card-img-top" alt="Наши врачи">
+                    <div class="card-body">
+                        <h5 class="card-title">Наши врачи</h5>
+                        <p class="card-text">Познакомьтесь с нашими опытными и квалифицированными врачами.</p>
+                        <a href="{% url 'doctors' %}" class="btn btn-primary">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/service_1.jpg' %}" class="card-img-top" alt="Наши услуги">
+                    <div class="card-body">
+                        <h5 class="card-title">Наши услуги</h5>
+                        <p class="card-text">Исследуйте широкий спектр услуг, которые мы предлагаем.</p>
+                        <a href="{% url 'services' %}" class="btn btn-primary">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/procedure_1.jpg' %}" class="card-img-top" alt="Наши процедуры">
+                    <div class="card-body">
+                        <h5 class="card-title">Наши процедуры</h5>
+                        <p class="card-text">Посмотрите, какие процедуры доступны в нашей клинике.</p>
+                        <a href="{% url 'procedures' %}" class="btn btn-primary">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-4 bg-light py-3">
+        <div class="container text-center">
+            <p class="mb-0">© 2024 Косметологическая клиника. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

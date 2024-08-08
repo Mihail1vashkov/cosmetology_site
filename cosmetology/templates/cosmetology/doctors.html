@@ -1,0 +1,22 @@
+{% extends 'cosmetology/base.html' %}
+
+{% block title %}Наши врачи{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Наши врачи</h1>
+<div class="row">
+    {% for doctor in doctors %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ doctor.name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ doctor.specialization }}</h6>
+                <p class="card-text">{{ doctor.bio }}</p>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>Врачи не найдены.</p>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'cosmetology/base.html' %}
+
+{% block title %}Процедуры{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Процедуры</h1>
+<div class="row">
+    {% for procedure in procedures %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ procedure.name }}</h5>
+                <p class="card-text">{{ procedure.description }}</p>
+                <p class="card-text"><strong>Время записи:</strong> {{ procedure.appointment_time }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
